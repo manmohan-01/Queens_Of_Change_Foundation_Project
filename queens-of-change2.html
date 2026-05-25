@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Queens Of Change Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* navbar */
+    .navbar {
+      background-color: #7b2d8b;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .navbar ul li a {
+      color: #f0d9f5;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffd700;
+    }
+
+    /* hero section */
+    .hero {
+      background-color: #f3e6f8;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #5a1a6b;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+      line-height: 1.7;
+    }
+
+    .hero button {
+      background-color: #7b2d8b;
+      color: white;
+      border: none;
+      padding: 12px 35px;
+      font-size: 16px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .hero button:hover {
+      background-color: #5a1a6b;
+    }
+
+    /* image section */
+    .hero-img {
+      margin-top: 40px;
+    }
+
+    .hero-img img {
+      width: 80%;
+      max-width: 700px;
+      border-radius: 12px;
+      border: 4px solid #c97fd4;
+    }
+
+    /* about */
+    .about {
+      padding: 60px 40px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about h2 {
+      font-size: 28px;
+      color: #7b2d8b;
+      margin-bottom: 20px;
+    }
+
+    .about p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    /* what we do cards */
+    .work-section {
+      background-color: #faf3ff;
+      padding: 60px 30px;
+      text-align: center;
+    }
+
+    .work-section h2 {
+      font-size: 26px;
+      color: #5a1a6b;
+      margin-bottom: 35px;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dbb8e8;
+      border-radius: 10px;
+      padding: 25px 20px;
+      width: 220px;
+      text-align: center;
+    }
+
+    .card .icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .card h3 {
+      font-size: 16px;
+      color: #7b2d8b;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.6;
+    }
+
+    /* join / volunteer section */
+    .join {
+      background-color: #7b2d8b;
+      color: white;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .join h2 {
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
+
+    .join p {
+      font-size: 16px;
+      max-width: 520px;
+      margin: 0 auto 30px auto;
+      line-height: 1.7;
+      color: #e8c9f5;
+    }
+
+    .join button {
+      background-color: #ffd700;
+      color: #333;
+      border: none;
+      padding: 13px 40px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 25px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .join button:hover {
+      background-color: #e6c200;
+    }
+
+    /* footer */
+    footer {
+      background-color: #3b0f47;
+      color: #ccc;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer .footer-name {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font-size: 13px;
+      line-height: 1.8;
+    }
+
+    footer .footer-links {
+      margin-top: 12px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer .footer-links a {
+      color: #c9a0d6;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    footer .footer-links a:hover {
+      color: #ffd700;
+    }
+
+    footer .copy {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* simple responsive */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 26px; }
+      .navbar ul { gap: 12px; }
+      .hero-img img { width: 95%; }
+      .about { padding: 40px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">👑 Queens Of Change</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Our Work</a></li>
+      <li><a href="#join">Join Us</a></li>
+    </ul>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Empowering Women,<br>Changing the World 🌸</h1>
+    <p>Queens Of Change Foundation believes in the strength of every woman. We work to make sure no woman is left behind — through education, support, and community.</p>
+    <button onclick="document.getElementById('join').scrollIntoView({behavior:'smooth'})">Get Involved</button>
+
+    <div class="hero-img">
+      <img
+        src="image.png"
+        alt="Women together in community"
+      />
+    </div>
+  </div>
+
+  <!-- About -->
+  <div class="about" id="about">
+    <h2>About Us</h2>
+    <p>
+      Queens Of Change Foundation was started with one goal in mind — to make sure women and girls everywhere have access to the opportunities they deserve. We believe that when a woman is given the right support, she doesn't just change her own life. She changes the lives of everyone around her.
+    </p>
+    <p>
+      Since we started, we have worked with thousands of women across different communities. We run programs focused on education, mental health, entrepreneurship, and leadership. Our volunteers are the heart of everything we do, and we welcome anyone who wants to be part of this journey.
+    </p>
+    <p>
+      Whether you're here to donate, volunteer, or just learn more — thank you for being here. Every queen counts. 💜
+    </p>
+  </div>
+
+  <!-- What We Do -->
+  <div class="work-section" id="work">
+    <h2>What We Do</h2>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">📚</div>
+        <h3>Education</h3>
+        <p>Helping girls stay in school and access quality learning.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💼</div>
+        <h3>Skills Training</h3>
+        <p>Teaching women practical skills so they can earn and grow.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Mental Health</h3>
+        <p>Providing safe spaces to talk, heal, and feel supported.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🌍</div>
+        <h3>Community</h3>
+        <p>Building networks where women lift each other up.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Join Us -->
+  <div class="join" id="join">
+    <h2>Want to Make a Difference?</h2>
+    <p>You don't need a lot of time or money to help. Just your willingness to show up is enough. Join us as a volunteer, donate what you can, or simply spread the word.</p>
+    <button onclick="alert('Thank you! We will get in touch with you soon 💜')">Volunteer With Us</button>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-name">👑 Queens Of Change Foundation</div>
+    <p>Standing with women. Every day, everywhere.</p>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#work">Our Work</a>
+      <a href="#join">Volunteer</a>
+      <a href="#">Donate</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="copy">© 2026 Queens Of Change Foundation. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
